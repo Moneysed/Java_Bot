@@ -12,6 +12,7 @@ public class UserInfo {
     public String annoys; //Меня раздражает в людях
     public String goals; //Цели знакомства
 
+
     private String fieldToString(String str, String description) {
         if (str != null && !str.isEmpty())
             return description + ": " + str + "\n";

@@ -65,9 +65,7 @@ public class MultiSessionTelegramBot extends TelegramLongPollingBot {
         //do nothing
     }
 
-    /**
-     * Метод возвращает ID текущего Telegram-чата
-     */
+
     public Long getCurrentChatId() {
         if (updateEvent.get().hasMessage()) {
             return updateEvent.get().getMessage().getFrom().getId();
@@ -80,9 +78,7 @@ public class MultiSessionTelegramBot extends TelegramLongPollingBot {
         return null;
     }
 
-    /**
-     * Метод возвращает текст из последнего сообщения Telegram-чата
-     */
+
     public String getMessageText() {
         return updateEvent.get().hasMessage() ? updateEvent.get().getMessage().getText() : "";
     }
@@ -92,10 +88,7 @@ public class MultiSessionTelegramBot extends TelegramLongPollingBot {
     }
 
 
-    /**
-     * Метод возвращает код нажатой кнопки (buttonKey).
-     * Речь идет о кнопках, которые были добавлены к сообщению.
-     */
+
     public String getCallbackQueryButtonKey() {
         return updateEvent.get().hasCallbackQuery() ? updateEvent.get().getCallbackQuery().getData() : "";
     }
